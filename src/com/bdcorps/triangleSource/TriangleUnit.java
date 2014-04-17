@@ -1,3 +1,5 @@
+package com.bdcorps.triangleSource;
+
 import java.awt.List;
 import java.util.ArrayList;
 
@@ -369,7 +371,7 @@ public class TriangleUnit {
 				B2 = angleUnknown2A;
 			}
 		}
-		if (solutions == 1) { // if only 1 solution exists, all the values
+		/*if (solutions == 1) { // if only 1 solution exists, all the values
 								// calculated for the 2nd solution are reset
 			A2 = 60;
 			B2 = 60;
@@ -377,7 +379,7 @@ public class TriangleUnit {
 			a2 = 3;
 			b2 = 3;
 			c2 = 3;
-		}
+		}*/
 	}
 
 	public void SSS() {

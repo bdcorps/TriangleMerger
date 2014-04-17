@@ -1,3 +1,5 @@
+package com.bdcorps.triangleSource;
+
 import java.util.Scanner;
 
 public class SolveMatic {
@@ -140,8 +142,7 @@ public class SolveMatic {
 					}
 					else
 						System.out.println("Error! Cannot enter more than 3 angles."); //prevents program from getting stuck in AAA case
-
-					System.out.print("\nsideCOunt: "+sideCount+" : angleCOunt: "+angleCount);} while(!((angleCount + sideCount == 3 && sideCount > 0) || (angleCount == 3 && sideCount == 1))); //conditions met
+} while(!((angleCount + sideCount == 3 && sideCount > 0) || (angleCount == 3 && sideCount == 1))); //conditions met
 					if (t.getSolutions() == 0)  //checks to see if inputed values of the triangle construct a valid triangle
 						{lettersUsed = new String[6]; 
 						System.out.println("A triangle cannot be constructed based on these specifications.\n\nRestarting program.\n");
@@ -202,6 +203,25 @@ public class SolveMatic {
 						System.out.println("Solution 2:");
 						System.out.println("Area = "+round(t.getArea2())+" units^2\n");
 					}
+				}	else if (menu == 4) { 
+						letter = inputLetter(); //prompts for which field to enter a value for
+				
+					if (letter.equals("a") || letter.equals("b") || letter.equals("c")) { //checks to see if a side length letter was inputed
+						tempS = inputSide(); //stores user input in temporary variable
+						//the following checks to see if letter is a, b, or c and assigns value to appropriate variable
+						if (letter.equals("a")){
+							a1 = tempS;t.puta1(a1);}
+						else if (letter.equals("b"))
+							{b1 = tempS;t.putb1(b1);}
+						else{
+							c1 = tempS;t.putc1(c1);}sideCount++; 
+
+						t=new TriangleUnit();
+						t.puta1(a1);
+						t.putb1(b1);
+						t.putc1(c1);
+					}
+					
 				}
 				else if (menu == 5) //exit program was selected
 					reset = false; 
@@ -209,7 +229,7 @@ public class SolveMatic {
 					System.out.println("Restarting program.\n");
 					reset=true; 
 				}
-			} while(menu>=1 && menu<=3); //loops back if display specifications, perimeter, or area selected
+			} while(menu>=1 && menu<=4); //loops back if display specifications, perimeter, or area selected
 		} while (reset); //loops back to the beginning if rest specifications was selected
 		System.out.println("Program terminated.");
 	}
