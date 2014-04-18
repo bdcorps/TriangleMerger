@@ -24,8 +24,8 @@ private int x=10, y=0;
    public void UpdateTriangle(double i1,double i2,double i3) {
 	   Point[] p = calcPoints(i1,i2,i3);
        for (int i = 0; i < p.length; i++){
-         triangleX[i]=p[i].x+100; 
-       triangleY[i] =p[i].y+100; 
+         triangleX[i]=p[i].x+this.getWidth()/2; 
+       triangleY[i] =p[i].y+this.getHeight()/2; 
        repaint();}
 }
 
@@ -57,7 +57,17 @@ public void setFirstLaunch(boolean firstLaunch) {
 			y+=10;
 			g.setColor(Color.WHITE);
       g.setFont(new Font("Arial", Font.PLAIN, 12));
-      g.drawString("Enter values into the",x , y);
+      g.drawString("Enter valid values into the above textboxes",10 , 15);
+     g.drawString("Then press 'Calculate'",10 , 30);
+     
+     g.drawString("Options available in the menu:",10 , 60);
+
+     g.drawString("Rounding places",10 , 75);
+     g.drawString("The solution to draw",10 , 90);
+     
+     g.drawString("Project Head: Vasu Kamra",10 , 135);
+     g.drawString("Lead Programmer: Sukhpal S. Saini",10 , 150);
+     
 		}else {	c0.setX(triangleX[0]);		c0.setY(triangleY[0]);
 		
 

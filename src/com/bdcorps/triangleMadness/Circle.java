@@ -34,9 +34,9 @@ public void setY(int y) {
    }
    public boolean contains(int x, int y) 
    {boolean hit=false;
-	   if ((x>this.x-width)&&(x<this.x+width*2)){
-		   if ((y>this.y-height)&&(y<this.y+height*2)){
-			   hit = true;}
+	   if ((x>this.x-width)&&(x<this.x+width)){
+		   if ((y>this.y-height)&&(y<this.y+height)){
+			   hit = true;}System.out.print("\nhit");
 	   }
        return hit;
    }
