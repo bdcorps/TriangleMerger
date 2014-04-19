@@ -1,8 +1,18 @@
 package com.bdcorps.triangleMadness;
-import java.awt.*;
 /**
- * The class Sprite models a moving game object, with its own operations
- *  and can paint itself.
+ * Triangle Object GUI 
+ * Part Of: GUI Based Triangle Solving Program
+ * @author Sukhpal S. Saini and Vasu Kamra
+ * Last Modified: 05-04-2014 at 2:20 PM
+ */
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Polygon;
+
+/**
+ * @author Sukhpal S. Saini and Vasu Kamra
+ * 
  */
 public class Triangle {
    // Variables (package access)
@@ -28,7 +38,10 @@ public void setSrcY(int[] srcY) {
       
    }
    
-   public void paint(Graphics g) {
+   /**Paints the triangle
+ * @param g
+ */
+public void paint(Graphics g) {
 	   Polygon mypolygon = new Polygon();
       g.setColor(Color.red);
       g.fillPolygon(srcX,srcY,3);

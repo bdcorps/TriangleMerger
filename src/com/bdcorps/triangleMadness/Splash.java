@@ -1,5 +1,17 @@
 package com.bdcorps.triangleMadness;
+/**
+ * Shows a splash screen for the GUI triangle solver program
+ * 
+ * Part Of: GUI Based Triangle Solving Program
+ * @author Sukhpal S. Saini and Vasu Kamra
+ * Last Modified: 05-04-2014 at 2:20 PM
+ */
+
 import java.awt.AWTEvent;
+/**
+ * @author Sukhpal S. Saini and Vasu Kamra
+ * 
+ */
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Image;
@@ -17,10 +29,9 @@ public class Splash extends JWindow implements MouseListener{
     ImageIcon splashIcon;  
     JPanel contentPane;  
     static Splash splash;
+    
       
     public Splash(){  
-
-        addMouseListener(this);
         image = new ImageIcon((getClass().getResource("bdcorps-logo2.png")))  
         .getImage();  
         splashIcon = new ImageIcon(image);  
@@ -42,7 +53,8 @@ public class Splash extends JWindow implements MouseListener{
         this.setVisible(true);  
           
         try{  
-            Thread.sleep(5000);  
+            Thread.sleep(2000); 	
+            StarterIt(); 
         }catch(InterruptedException e){  
             //do nothing here!  
         }  
@@ -68,12 +80,20 @@ public class Splash extends JWindow implements MouseListener{
           
     }  
   
+    /**Starts the main Starter class and destroys this
+     * 
+     */
+    private void StarterIt() { 
+    	dispose();
+    	Starter t= new Starter(); 
+
+    }
     private void setSplashLocation() {  
         Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();  
         Dimension frame = this.getSize();       
           
         int x = (int)(screen.getWidth() - frame.getWidth())/2;  
-        int y = (int)(screen.getHeight() - frame.getHeight())/2 - 50;  
+        int y = (int)(screen.getHeight() - frame.getHeight())/2;  
           
         this.setLocation(x, y);  
     }  
@@ -88,11 +108,7 @@ public class Splash extends JWindow implements MouseListener{
 
 	@Override
 	public void mouseClicked(MouseEvent arg0) {
-		// TODO Auto-generated method stub
-		System.out.print("dff");
-	 	 //System.exit(0);
-		Starter t= new Starter(); 
-	this.dispose();
+		StarterIt();
 	}
 
 
