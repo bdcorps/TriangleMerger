@@ -1,9 +1,19 @@
 package com.bdcorps.triangleMadness;
 
-import java.awt.*;
+/**
+ *Circle GUI object
+ * 
+ * Part Of: GUI Based Triangle Solving Program
+ * @author Sukhpal S. Saini and Vasu Kamra
+ * Last Modified: 05-04-2014 at 2:20 PM
+ */
+
+import java.awt.Color;
+import java.awt.Graphics;
 
 /**
- * "Circle" GUI object
+ * @author Sukhpal S. Saini and Vasu Kamra
+ * 
  */
 
 public class Circle {

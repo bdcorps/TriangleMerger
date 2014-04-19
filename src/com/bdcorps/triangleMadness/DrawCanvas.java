@@ -1,5 +1,13 @@
 package com.bdcorps.triangleMadness;
 
+/**
+ *Draws the canvas for the triangle to be drawn
+ * 
+ * Part Of: GUI Based Triangle Solving Program
+ * @author Sukhpal S. Saini and Vasu Kamra
+ * Last Modified: 05-04-2014 at 2:20 PM
+ */
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
@@ -11,7 +19,8 @@ import java.awt.event.MouseMotionListener;
 import javax.swing.JPanel;
 
 /**
- * DrawCanvas (inner class) is a JPanel the handles the drawing for triangle
+ * @author Sukhpal S. Saini and Vasu Kamra
+ * 
  */
 public class DrawCanvas extends JPanel implements MouseListener,
 		MouseMotionListener {
