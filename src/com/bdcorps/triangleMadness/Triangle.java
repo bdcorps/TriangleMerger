@@ -17,8 +17,8 @@ import java.awt.Polygon;
 public class Triangle {
    // Variables (package access)
 	
-   int x, y; // rectangle (for illustration)
-   Color color = Color.RED; // color of the object
+	private int x, y; // rectangle (for illustration)
+	private Color color = Color.RED; // color of the object
   private int [] srcX;
   private int[] srcY;
    public void setSrcX(int[] srcX) {

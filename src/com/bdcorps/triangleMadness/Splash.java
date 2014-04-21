@@ -24,12 +24,11 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JWindow;
 public class Splash extends JWindow implements MouseListener{  
-    JLabel splashImgHolder;  
-    Image image;  
-    ImageIcon splashIcon;  
-    JPanel contentPane;  
-    static Splash splash;
-    
+	private JLabel splashImgHolder;  
+	private Image image;  
+	private ImageIcon splashIcon;  
+	private JPanel contentPane;  
+	private Splash splash;
       
     public Splash(){  
         image = new ImageIcon((getClass().getResource("bdcorps-logo2.png")))  
@@ -97,7 +96,7 @@ public class Splash extends JWindow implements MouseListener{
           
         this.setLocation(x, y);  
     }  
-    public static void main(String[] arg){  
+    public void main(String[] arg){  
     splash = new Splash();  
     
         //get rid of window as it finished showing  

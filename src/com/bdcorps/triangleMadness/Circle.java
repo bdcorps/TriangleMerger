@@ -17,9 +17,9 @@ import java.awt.Graphics;
  */
 
 public class Circle {
-	int x, y;
-	int width = 15, height = 15;
-	String label;
+	private int x, y;
+	private int width = 15, height = 15;
+	private String label;
 
 	/** Constructor to setup the GUI */
 	public Circle(int x, int y, String label) {

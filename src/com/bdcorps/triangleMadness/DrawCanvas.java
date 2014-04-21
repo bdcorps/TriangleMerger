@@ -24,11 +24,11 @@ import javax.swing.JPanel;
  */
 public class DrawCanvas extends JPanel implements MouseListener,
 		MouseMotionListener {
-	public int[] triangleX = { 0, 100, 200 };
-	public int[] triangleY = { 0, 100, 200 };
-	Triangle t;
-	boolean dragging0 = false, dragging1 = false, dragging2 = false;
-	Circle c0, c1, c2;
+	private int[] triangleX = { 0, 100, 200 };
+	private int[] triangleY = { 0, 100, 200 };
+	private Triangle t;
+	private boolean dragging0 = false, dragging1 = false, dragging2 = false;
+	private Circle c0, c1, c2;
 	private boolean firstLaunch;
 	private boolean update;
 	private int x = 10, y = 0;
