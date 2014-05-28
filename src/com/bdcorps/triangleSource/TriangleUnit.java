@@ -253,17 +253,17 @@ public class TriangleUnit {
 		else
 			C1 = 180 - A1 - B1;
 		// calculates the other two sides using the sine law twice
-		if (lettersArray.indexOf("a") == -1) {
+		if (lettersArray.indexOf("a") != -1) {
 			b1 = Math.sin(Math.toRadians(B1))
 					* (a1 / Math.sin(Math.toRadians(A1)));
 			c1 = Math.sin(Math.toRadians(C1))
 					* (a1 / Math.sin(Math.toRadians(A1)));
-		} else if (lettersArray.indexOf("b") == -1) {
+		} else if (lettersArray.indexOf("b") != -1) {
 			a1 = Math.sin(Math.toRadians(A1))
 					* (b1 / Math.sin(Math.toRadians(B1)));
 			c1 = Math.sin(Math.toRadians(C1))
 					* (b1 / Math.sin(Math.toRadians(B1)));
-		} else {
+		} else if (lettersArray.indexOf("c") != -1) {
 			b1 = Math.sin(Math.toRadians(B1))
 					* (c1 / Math.sin(Math.toRadians(C1)));
 			a1 = Math.sin(Math.toRadians(A1))
@@ -425,7 +425,7 @@ public class TriangleUnit {
 	}
 
 	/**
-	 * Calculates the number of solutions a tiangle will have
+	 * Calculates the number of solutions a triangle will have
 	 * 
 	 * @return The number of solutions
 	 */
@@ -434,7 +434,8 @@ public class TriangleUnit {
 		double height; // variable which will hold the height of the triangle
 		double s1 = 3, s2 = 3, angle = 3;
 
-		if (angleCount == 2 && A1 + B1 + C1 >= 180) // checks if there are no 2
+			
+		if (angleCount == 2 && A1 + B1 + C1 > 180) // checks if there are no 2
 													// obtuse angles, no 2 right
 													// angles, and sum of 2
 													// angles less than 180 when
